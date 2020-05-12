@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+body, h1, p, div {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+canvas {
+  vertical-align: bottom;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.title h1 {
+  margin: 32px 0 8px;
+  font-size: 40px;
+}
+
+.title p {
+  font-size: 20px;
+}
+
+.sound {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+}
+
+.sound button {
+  padding: 16px;
+  border: solid 2px #555;
+  background-color: aquamarine;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+}
