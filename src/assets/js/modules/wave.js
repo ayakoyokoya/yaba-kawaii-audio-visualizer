@@ -20,7 +20,6 @@ class Wave {
       uAspect: { value: window.innerWidth / window.innerHeight },
       uTime: { value: 1.0 },
       uResolution: { value: new THREE.Vector2() },
-      uMouse: { value: new THREE.Vector2() },
     };
 
     this.material = new THREE.ShaderMaterial({
