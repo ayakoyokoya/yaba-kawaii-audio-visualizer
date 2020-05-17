@@ -8,7 +8,6 @@ import Code from '../elementsText/code.js';
 
 class TextGroup {
   constructor() {
-
     this.group = new THREE.Object3D();
 
     const about = new About();
@@ -29,14 +28,14 @@ class TextGroup {
 
     this.raycaster = new THREE.Raycaster();
 
-    window.addEventListener('mousemove', this.onMouseMove.bind(this), {
+    window.addEventListener('mouseup', this.onMouseUp.bind(this), {
       passive: true,
     });
 
-    this.onMouseMove({ clientX: 0, clientY: 0 });
+    this.onMouseUp({ clientX: 0, clientY: 0 });
   }
 
-  onMouseMove({clientX, clientY}) {
+  onMouseUp({ clientX, clientY }) {
     this.width = window.innerWidth;
     this.height = window.innerHeight;
     this.mouse.x = (clientX / this.width) * 2 - 1;
@@ -44,19 +43,14 @@ class TextGroup {
   }
 
   render(camera) {
-    const body = document.querySelector('body');
-
     this.raycaster.setFromCamera(this.mouse, camera);
     this.intersects = this.raycaster.intersectObjects(this.meshList);
 
-    this.meshList.map(mesh => {
+    this.meshList.map((mesh) => {
       if (this.intersects.length > 0 && mesh === this.intersects[0].object) {
-        body.style.cursor = 'pointer';
         window.open(mesh.userData.url);
-      } else {
-        body.style.cursor = 'default';
       }
-    })
+    });
   }
 }
 
