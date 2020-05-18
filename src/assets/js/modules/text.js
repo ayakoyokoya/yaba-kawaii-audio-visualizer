@@ -4,11 +4,10 @@ import fontJson from 'three/examples/fonts/droid/droid_sans_regular.typeface.jso
 import threeTone from '../../img/threeTone.jpg';
 
 
-class TextGroup {
+class Text {
   constructor() {
 
-    this.setCommonText();
-    this.setEachText();
+    this.setup();
     const textNum = this.eachParams.letter.length;
 
     //
@@ -58,7 +57,7 @@ class TextGroup {
     this.onMouseUp({ clientX: 0, clientY: 0 });
   }
 
-  setCommonText() {
+  setup() {
     this.toonTexture = new THREE.TextureLoader().load(threeTone);
     this.toonTexture.minFilter = THREE.NearestFilter;
     this.toonTexture.magFilter = THREE.NearestFilter;
@@ -81,9 +80,7 @@ class TextGroup {
       bevelOffset: 0,
       bevelSegments: 1,
     }
-  }
 
-  setEachText() {
     this.eachParams = {
       letter: ['about', 'github', 'codepen', 'code'],
       color: [0xe1e5bf, 0xc6f0e0, 0xf0bfbf, 0xc6b8e2],
@@ -110,7 +107,7 @@ class TextGroup {
 
   render(camera) {
     this.raycaster.setFromCamera(this.mouse, camera);
-    this.intersects = this.raycaster.intersectObjects(this.group);
+    this.intersects = this.raycaster.intersectObjects(this.group.children);
 
     this.group.children.map((mesh) => {
       if (this.intersects.length > 0 && mesh === this.intersects[0].object) {
@@ -120,4 +117,4 @@ class TextGroup {
   }
 }
 
-export default TextGroup;
+export default Text;
