@@ -1,30 +1,53 @@
 import * as THREE from 'three/build/three.module.js';
 
-import About from '../elementsText/about.js';
-import Github from '../elementsText/github.js';
-import Codepen from '../elementsText/codepen.js';
-import Code from '../elementsText/code.js';
+import fontJson from 'three/examples/fonts/droid/droid_sans_regular.typeface.json';
+import threeTone from '../../img/threeTone.jpg';
 
 
 class TextGroup {
   constructor() {
+
+    this.setCommonText();
+    this.setEachText();
+    const textNum = this.eachParams.letter.length;
+
+    //
+
     this.group = new THREE.Object3D();
 
-    const about = new About();
-    this.group.add(about.mesh);
+    for (let i = 0; i < textNum; i++) {
 
-    const github = new Github();
-    this.group.add(github.mesh);
+      this.geometry = new THREE.TextGeometry(
+        this.eachParams.letter[i],
+        this.textParams
+      );
 
-    const codepen = new Codepen();
-    this.group.add(codepen.mesh);
+      this.geometry.center();
 
-    const code = new Code();
-    this.group.add(code.mesh);
+      this.material = new THREE.MeshToonMaterial({
+        gradientMap: this.toonTexture,
+        color: this.eachParams.color[i],
+        userData: { outlineParameters: this.outlineParams },
+      });
+
+      this.mesh = new THREE.Mesh(this.geometry, this.material);
+
+      this.mesh.position.set(
+        this.eachParams.pos.x[i],
+        this.eachParams.pos.y[i],
+        this.eachParams.pos.z[i]
+      );
+
+      this.mesh.userData = {
+        url: this.eachParams.url[i],
+      };
+
+      this.group.add(this.mesh);
+    }
+
+    //
 
     this.mouse = new THREE.Vector2();
-
-    this.meshList = [about.mesh, github.mesh, codepen.mesh, code.mesh];
 
     this.raycaster = new THREE.Raycaster();
 
@@ -33,6 +56,49 @@ class TextGroup {
     });
 
     this.onMouseUp({ clientX: 0, clientY: 0 });
+  }
+
+  setCommonText() {
+    this.toonTexture = new THREE.TextureLoader().load(threeTone);
+    this.toonTexture.minFilter = THREE.NearestFilter;
+    this.toonTexture.magFilter = THREE.NearestFilter;
+
+    this.font = new THREE.Font(fontJson);
+
+    this.outlineParams = {
+      thickness: 0.003,
+      visible: true,
+    }
+
+    this.textParams = {
+      font: this.font,
+      size: 14,
+      height: 3,
+      curveSegments: 12,
+      bevelEnabled: true,
+      bevelThickness: 1,
+      bevelSize: 0.5,
+      bevelOffset: 0,
+      bevelSegments: 1,
+    }
+  }
+
+  setEachText() {
+    this.eachParams = {
+      letter: ['about', 'github', 'codepen', 'code'],
+      color: [0xe1e5bf, 0xc6f0e0, 0xf0bfbf, 0xc6b8e2],
+      pos: {
+        x: [-70, 70, -70, 70],
+        y: [20, 20, -40, -40],
+        z: [110, 110, 110, 110],
+      },
+      url: [
+        'https://yokoyaayako.com/about',
+        'https://github.com/ayako-yokoya',
+        'https://codepen.io/ayako-yokoya',
+        'https://github.com/ayako-yokoya/portfolio-site',
+      ],
+    }
   }
 
   onMouseUp({ clientX, clientY }) {
@@ -44,9 +110,9 @@ class TextGroup {
 
   render(camera) {
     this.raycaster.setFromCamera(this.mouse, camera);
-    this.intersects = this.raycaster.intersectObjects(this.meshList);
+    this.intersects = this.raycaster.intersectObjects(this.group);
 
-    this.meshList.map((mesh) => {
+    this.group.children.map((mesh) => {
       if (this.intersects.length > 0 && mesh === this.intersects[0].object) {
         window.open(mesh.userData.url);
       }
