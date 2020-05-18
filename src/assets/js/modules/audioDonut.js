@@ -5,24 +5,28 @@ import threeTone from '../../img/threeTone.jpg';
 class Donut {
   constructor() {
 
-    const toonTexture = new THREE.TextureLoader().load(threeTone);
-    toonTexture.minFilter = THREE.NearestFilter;
-    toonTexture.magFilter = THREE.NearestFilter;
-
-    const outlineParams = {
-      thickness: 0.003,
-      visible: true,
-    };
+    this.setup();
 
     const geometry = new THREE.TorusBufferGeometry(40, 20, 60, 50);
     const material = new THREE.MeshToonMaterial({
-      gradientMap: toonTexture,
+      gradientMap: this.toonTexture,
       color: 0xffa6c9,
+      userData: { outlineParameters: this.outlineParams },
     });
-    material.userData.outlineParameters = outlineParams;
 
     this.mesh = new THREE.Mesh(geometry, material);
     this.mesh.position.y = -10;
+  }
+
+  setup() {
+    this.toonTexture = new THREE.TextureLoader().load(threeTone);
+    this.toonTexture.minFilter = THREE.NearestFilter;
+    this.toonTexture.magFilter = THREE.NearestFilter;
+
+    this.outlineParams = {
+      thickness: 0.003,
+      visible: true,
+    };
   }
 
   render(upperAvgFr) {

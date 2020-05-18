@@ -6,30 +6,35 @@ import threeTone from '../../img/threeTone.jpg';
 class Heart {
   constructor() {
 
-    const toonTexture = new THREE.TextureLoader().load(threeTone);
-    toonTexture.minFilter = THREE.NearestFilter;
-    toonTexture.magFilter = THREE.NearestFilter;
-
-    const outlineParams = {
-      thickness: 0.001,
-      visible: true,
-    };
-
+    this.setup();
     this.writeShape();
     this.setProps();
+
+    //
 
     const light = new THREE.PointLight(0xffffff, 1, 800);
     const geometry = new THREE.ExtrudeBufferGeometry(this.shape, this.props);
     const material = new THREE.MeshToonMaterial({
-      gradientMap: toonTexture,
+      gradientMap: this.toonTexture,
       color: 0xd9184b,
+      userData: { outlineParameters: this.outlineParams },
     });
-    material.userData.outlineParameters = outlineParams;
 
     this.mesh = new THREE.Mesh(geometry, material);
     this.mesh.scale.set(.6, .6, .6);
     this.mesh.rotation.set(0, 0, Math.PI);
     this.mesh.add(light);
+  }
+
+  setup() {
+    this.toonTexture = new THREE.TextureLoader().load(threeTone);
+    this.toonTexture.minFilter = THREE.NearestFilter;
+    this.toonTexture.magFilter = THREE.NearestFilter;
+
+    this.outlineParams = {
+      thickness: 0.001,
+      visible: true,
+    };
   }
 
   writeShape() {
