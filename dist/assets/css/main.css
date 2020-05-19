@@ -60,6 +60,7 @@ li > a {
   display: inline-flex;
   align-items: flex-end;
   text-align: right;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .audio p {
@@ -74,8 +75,8 @@ li > a {
   background-color: aquamarine;
   cursor: pointer;
   outline: none;
-  font-family: 'Quicksand', sans-serif;
   font-size: 12px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 @media screen and (min-width: 896px) {
