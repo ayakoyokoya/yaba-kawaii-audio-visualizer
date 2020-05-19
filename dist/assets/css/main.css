@@ -55,11 +55,20 @@ li > a {
 
 .audio {
   position: absolute;
-  bottom: 24px;
+  bottom: 12px;
   right: 24px;
+  display: inline-flex;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.audio p {
+  display: inline;
+  font-size: 14px;
 }
 
 .audio button {
+  margin-left: 16px;
   padding: 14px;
   border: solid 2px #555;
   background-color: aquamarine;
@@ -81,7 +90,7 @@ li > a {
 
   .audio {
     position: absolute;
-    bottom: 32px;
+    bottom: 24px;
     right: 32px;
   }
 
