@@ -29,14 +29,14 @@ class Donut {
     };
   }
 
-  render(upperAvgFr) {
+  render(value) {
     const sec = performance.now() / 1000;
 
     const donut = this.mesh;
     donut.rotation.x = sec;
     donut.rotation.y = sec;
 
-    const scale = upperAvgFr + 1.;
+    const scale = value + 1.;
     donut.scale.x = scale;
     donut.scale.y = scale;
     donut.scale.z = scale;

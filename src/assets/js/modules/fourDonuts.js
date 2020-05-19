@@ -3,7 +3,6 @@ import threeTone from '../../img/threeTone.jpg';
 
 class FourDonuts {
   constructor() {
-
     this.setup();
     this.donutNum = this.eachParams.color.length;
 
@@ -12,7 +11,6 @@ class FourDonuts {
     this.group = new THREE.Object3D();
 
     for (let i = 0; i < this.donutNum; i++) {
-
       this.geometry = new THREE.TorusBufferGeometry(40, 20, 60, 50);
       this.geometry.center();
 
@@ -47,19 +45,21 @@ class FourDonuts {
     this.eachParams = {
       color: [0xe1e5bf, 0xc6f0e0, 0xf0bfbf, 0xc6b8e2],
       pos: {
-        x: [-170, -170, 170, 170],
-        y: [-90, 70, 70, -90],
+        x: [-170, 170, -170, 170],
+        y: [70, 70, -90, -90],
         z: [-50, -50, -50, -50],
       },
-    }
+    };
   }
 
-  render() {
+  render(value1, value2, value3, value4) {
     const sec = performance.now() / 1000;
 
-    for (let j = 0; j < this.donutNum; j++) {
-      this.group.children[j].rotation.x = sec;
-      this.group.children[j].rotation.y = sec * 2;
+    this.audioValues = [value1, value2, value3, value4];
+
+    for (let i = 0; i < this.donutNum; i++) {
+      this.group.children[i].rotation.x = sec - this.audioValues[i]/5;
+      this.group.children[i].rotation.y = sec * 2 - this.audioValues[i]/5;
     }
   }
 }
