@@ -1,11 +1,13 @@
 # portfolio site
-🍩simple audio visualizer, toon shading and noise shading(glsl) with three.js🍩
+🍩 audio visualizer and toon shading with three.js 🍩
 
 https://yokoyaayako.com/
 
-<img width="1052" alt="portfolio-site_01" src="https://user-images.githubusercontent.com/44118351/81717765-ec241300-94b5-11ea-9e40-6a93a5b696a9.png">
+<img width="1000" alt="portfolio-site_1" src="https://user-images.githubusercontent.com/44118351/82359058-5c94dc00-9a42-11ea-836a-faa09804ef0e.png">
 
-<img width="1052" alt="portfolio-site_02" src="https://user-images.githubusercontent.com/44118351/81717796-f9d99880-94b5-11ea-941e-d4f61e92f6fd.png">
+<img width="1000" alt="portfolio-site_2" src="https://user-images.githubusercontent.com/44118351/82359047-5868be80-9a42-11ea-9eeb-4393321cdc56.png">
+
+<img width="373" alt="portfolio-site_3" src="https://user-images.githubusercontent.com/44118351/82359063-5dc60900-9a42-11ea-8ee6-d48b4d862091.png">
 
 # refference site
 webgl<br>
