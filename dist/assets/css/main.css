@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
-body, h1, p, div {
+body,
+h1,
+p,
+div,
+ul,
+li {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  text-decoration: none;
 }
 
 canvas {
@@ -21,25 +27,66 @@ canvas {
 
 .title h1 {
   margin: 32px 0 8px;
-  font-size: 40px;
+  font-size: 24px;
 }
 
 .title p {
-  font-size: 20px;
+  font-size: 16px;
 }
 
-.sound {
+ul.links {
+  margin-top: 48px;
+}
+
+li.link {
+  border-right: solid 1px #333;
+  display: inline-block;
+}
+
+li.link:nth-of-type(1) {
+  border-left: solid 1px #333;
+}
+
+li > a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.audio {
   position: absolute;
-  bottom: 32px;
-  right: 32px;
+  bottom: 24px;
+  right: 24px;
 }
 
-.sound button {
-  padding: 16px;
+.audio button {
+  padding: 14px;
   border: solid 2px #555;
   background-color: aquamarine;
   cursor: pointer;
   outline: none;
   font-family: 'Quicksand', sans-serif;
-  font-size: 16px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 896px) {
+  .title h1 {
+    margin: 32px 0 8px;
+    font-size: 40px;
+  }
+
+  .title p {
+    font-size: 20px;
+  }
+
+  .audio {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+  }
+
+  .audio button {
+    padding: 16px;
+    font-size: 16px;
+  }
 }
