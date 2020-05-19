@@ -1,5 +1,4 @@
 import * as THREE from 'three/build/three.module.js';
-import { TweenMax } from 'gsap';
 import threeTone from '../../img/threeTone.jpg';
 
 
