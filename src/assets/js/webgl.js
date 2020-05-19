@@ -1,6 +1,6 @@
 import * as THREE from 'three/build/three.module.js';
 import { OutlineEffect } from 'three/examples/jsm/effects/OutlineEffect.js';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+//import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 import { Howl, Howler } from 'howler/dist/howler.min';
 
@@ -26,7 +26,7 @@ class Webgl {
     this.createCamera();
     this.addDirectionalLight();
     this.addOutlineEffect();
-    this.addOrbitControls();
+    //this.addOrbitControls();
     this.getMesh();
     this.onResize();
     this.render();
@@ -132,9 +132,9 @@ class Webgl {
     });
   }
 
-  addOrbitControls() {
-    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
-  }
+  //addOrbitControls() {
+  //  this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+  //}
 
   getMesh() {
     this.audioDonut = new AudioDonut();
@@ -226,7 +226,7 @@ class Webgl {
 
   render() {
     this.updateAudioData();
-    this.controls.update();
+    //this.controls.update();
 
     this.audioDonut.render(this.audioValues[0]);
     this.heart.render();
