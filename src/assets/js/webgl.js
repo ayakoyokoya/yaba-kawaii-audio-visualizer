@@ -3,6 +3,7 @@ import { OutlineEffect } from 'three/examples/jsm/effects/OutlineEffect.js';
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 import { Howl, Howler } from 'howler/dist/howler.min';
+import mp3Audio from '../audio/i_wanna_eat_donuts.mp3';
 
 import AudioDonut from './modules/audioDonut.js';
 import FourDonuts from './modules/fourDonuts.js';
@@ -80,9 +81,9 @@ class Webgl {
   // use howler.js
   createAudio() {
     this.howler = new Howl({
-      src: ['https://yokoyaayako.com/audio/i_wanna_eat_donuts.mp3'],
+      src: [mp3Audio],
       preload: true,
-      volume: .5,
+      volume: 0.5,
       loop: true,
     });
 

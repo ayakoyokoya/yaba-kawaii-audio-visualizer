@@ -47,6 +47,13 @@ module.exports = {
         loader: 'json-loader',
         type: 'javascript/auto',
       },
+      {
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '../audio/[name].[ext]',
+        },
+      },
     ],
   },
   devServer: {
