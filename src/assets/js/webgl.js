@@ -151,7 +151,7 @@ class Webgl {
       this.fourDonuts = new FourDonuts();
       this.scene.add(this.fourDonuts.group);
 
-      this.text = new Text();
+      this.text = new Text(this.camera);
       this.scene.add(this.text.group);
 
       this.wave = new Wave(this.dataArray, this.bufferLength);
@@ -239,7 +239,6 @@ class Webgl {
         this.audioValues[3],
         this.audioValues[4]
       );
-      this.text.render(this.camera);
       this.wave.render();
     }
 

@@ -5,9 +5,9 @@ import threeTone from '../../img/threeTone.jpg';
 
 
 class Text {
-  constructor() {
-
+  constructor(camera) {
     this.setup();
+    this.camera = camera;
     const textNum = this.eachParams.letter.length;
 
     //
@@ -15,7 +15,6 @@ class Text {
     this.group = new THREE.Object3D();
 
     for (let i = 0; i < textNum; i++) {
-
       this.geometry = new THREE.TextGeometry(
         this.eachParams.letter[i],
         this.textParams
@@ -46,15 +45,7 @@ class Text {
 
     //
 
-    this.mouse = new THREE.Vector2();
-
-    this.raycaster = new THREE.Raycaster();
-
-    window.addEventListener('mouseup', this.onMouseUp.bind(this), {
-      passive: true,
-    });
-
-    this.onMouseUp({ clientX: 0, clientY: 0 });
+    document.addEventListener('mousedown', this.onMouseDown.bind(this), false);
   }
 
   setup() {
@@ -67,7 +58,7 @@ class Text {
     this.outlineParams = {
       thickness: 0.003,
       visible: true,
-    }
+    };
 
     this.textParams = {
       font: this.font,
@@ -79,7 +70,7 @@ class Text {
       bevelSize: 0.5,
       bevelOffset: 0,
       bevelSegments: 1,
-    }
+    };
 
     this.eachParams = {
       letter: ['about', 'github', 'codepen', 'code'],
@@ -93,20 +84,21 @@ class Text {
         'https://yokoyaayako.com/about/',
         'https://github.com/ayakoyokoya/',
         'https://codepen.io/ayakoyokoya/',
-        'https://github.com/ayakoyokoya/portfolio-site/',
+        'https://github.com/ayakoyokoya/yaba-kawaii-audio-visualizer/',
       ],
-    }
+    };
   }
 
-  onMouseUp({ clientX, clientY }) {
+  onMouseDown(event) {
+    this.mouse = new THREE.Vector2();
+    this.raycaster = new THREE.Raycaster();
+
     this.width = window.innerWidth;
     this.height = window.innerHeight;
-    this.mouse.x = (clientX / this.width) * 2 - 1;
-    this.mouse.y = -(clientY / this.height) * 2 + 1;
-  }
+    this.mouse.x = (event.clientX / this.width) * 2 - 1;
+    this.mouse.y = -(event.clientY / this.height) * 2 + 1;
 
-  render(camera) {
-    this.raycaster.setFromCamera(this.mouse, camera);
+    this.raycaster.setFromCamera(this.mouse, this.camera);
     this.intersects = this.raycaster.intersectObjects(this.group.children);
 
     this.group.children.map((mesh) => {
