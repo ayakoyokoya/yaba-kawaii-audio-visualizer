@@ -49,8 +49,7 @@ module.exports = {
         options: {
           name: '[name].[ext]',
           outputPath: 'audio/',
-          publicPath: (path) =>
-            'yaba-kawaii-audio-visualizer/dist/assets/audio/' + path,
+          publicPath: (path) => '/assets/audio/' + path,
         },
       },
     ],
