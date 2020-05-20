@@ -4,8 +4,8 @@ module.exports = {
   mode: 'development',
   entry: './src/main.js',
   output: {
-    filename: 'main.js',
-    path: path.join(__dirname, 'dist/assets/js'),
+    filename: 'js/main.js',
+    path: path.resolve(__dirname, 'dist/assets'),
   },
   module: {
     rules: [
@@ -37,10 +37,6 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
         loader: 'url-loader',
-        //options: {
-        //  limit: 2048,
-        //  name: "../img/[name].[ext]",
-        //},
       },
       {
         test: /\.json$/,
@@ -51,7 +47,9 @@ module.exports = {
         test: /\.(ogg|mp3|wav|mpe?g)$/i,
         loader: 'file-loader',
         options: {
-          name: '../audio/[name].[ext]',
+          name: '[name].[ext]',
+          outputPath: 'audio/',
+          publicPath: path => '/dist/assets/audio/' + path,
         },
       },
     ],
