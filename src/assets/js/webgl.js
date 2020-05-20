@@ -83,7 +83,7 @@ class Webgl {
     this.howler = new Howl({
       src: [mp3Audio],
       preload: true,
-      volume: 0.5,
+      volume: 0.8,
       loop: true,
     });
 
