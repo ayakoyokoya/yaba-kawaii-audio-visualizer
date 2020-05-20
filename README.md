@@ -1,24 +1,16 @@
-# portfolio site
-🍩 audio visualizer and toon shading with three.js 🍩
+# Yaba Kawaii Audio Visualizer
+🍩 A yaba kawaii audio visualizer using four toon shading donuts with three.js 
 
-https://yokoyaayako.com/
 
-<img width="1000" alt="portfolio-site_1" src="https://user-images.githubusercontent.com/44118351/82359058-5c94dc00-9a42-11ea-836a-faa09804ef0e.png">
+check out this😉
 
-<img width="1000" alt="portfolio-site_2" src="https://user-images.githubusercontent.com/44118351/82359047-5868be80-9a42-11ea-9eeb-4393321cdc56.png">
+[Yaba Kawaii Audio Visualizer](https://ayakoyokoya.github.io/yaba-kawaii-audio-visualizer/dist/)
 
-<img width="373" alt="portfolio-site_3" src="https://user-images.githubusercontent.com/44118351/82359063-5dc60900-9a42-11ea-8ee6-d48b4d862091.png">
+<img width="100%" alt="yabakawaii_imac" src="https://user-images.githubusercontent.com/44118351/82453677-c61cf500-9aeb-11ea-9caf-c00ec2a8c4a5.png">
 
-# refference site
-webgl<br>
-https://wgld.org/d/webgl/
+<div align="center"><img alt="yabakawaii_gif" src="https://user-images.githubusercontent.com/44118351/82460900-bd7cec80-9af4-11ea-901a-978516854578.gif"></div>
 
-three.js<br>
-https://threejs.org/<br>
-https://ics.media/tutorial-three/
 
-glsl<br>
-https://thebookofshaders.com/?lan=jp
+🍫iphonex / 🍡ipad vertical screen
 
-web audio api<br>
-https://medium.com/@mag_ops/music-visualiser-with-three-js-web-audio-api-b30175e7b5ba
+<img width="25%" alt="yabakawaii_iphone" src="https://user-images.githubusercontent.com/44118351/82457613-97554d80-9af0-11ea-9d86-5cfac5f1cfb0.png"> <img width="72%" alt="yabakawaii_ipad" src="https://user-images.githubusercontent.com/44118351/82457681-ab00b400-9af0-11ea-8ce1-1422c9929be7.png">
