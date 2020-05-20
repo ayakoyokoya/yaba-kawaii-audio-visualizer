@@ -186,7 +186,7 @@ eval("function _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol ===
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"/dist/assets/audio/i_wanna_eat_donuts.mp3\");\n\n//# sourceURL=webpack:///./src/assets/audio/i_wanna_eat_donuts.mp3?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"yaba-kawaii-audio-visualizer/dist/assets/audio/i_wanna_eat_donuts.mp3\");\n\n//# sourceURL=webpack:///./src/assets/audio/i_wanna_eat_donuts.mp3?");
 
 /***/ }),
 
