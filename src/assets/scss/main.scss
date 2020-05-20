@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+
+$breakpoint: 896px;
+
+@mixin min-screen($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+
+body, div, h1, p, ul, li {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+canvas {
+  vertical-align: bottom;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+
+  h1 {
+    margin: 32px 0 8px;
+    font-size: 24px;
+    @media screen and (min-width: $breakpoint) {
+      margin: 32px 0 8px;
+      font-size: 40px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    @media screen and (min-width: $breakpoint) {
+      font-size: 20px;
+    }
+  }
+
+  ul {
+    margin-top: 48px;
+
+    li {
+      border-right: solid 1px #333;
+      display: inline-block;
+      &:nth-of-type(1) {
+        border-left: solid 1px #333;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+        padding: 8px;
+      }
+    }
+  }
+}
+
+.audio {
+  position: absolute;
+  bottom: 12px;
+  right: 24px;
+  display: inline-flex;
+  align-items: flex-end;
+  text-align: right;
+  font-family: 'Comfortaa', cursive;
+  @media screen and (min-width: $breakpoint) {
+    bottom: 24px;
+    right: 32px;
+  }
+
+  p {
+    display: inline;
+    font-size: 14px;
+  }
+
+  button {
+    margin-left: 16px;
+    padding: 14px;
+    border: solid 2px #555;
+    background-color: aquamarine;
+    cursor: pointer;
+    outline: none;
+    font-size: 12px;
+    font-family: 'Comfortaa', cursive;
+    @media screen and (min-width: $breakpoint) {
+      padding: 16px;
+      font-size: 16px;
+    }
+  }
+}

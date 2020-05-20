@@ -17,6 +17,19 @@ module.exports = {
         },
       },
       {
+        test: /\.scss/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: { url: false },
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
+      },
+      {
         test: /\.(glsl|vert|frag)$/,
         exclude: /node_modules/,
         loader: ['raw-loader', 'glslify-loader'],
