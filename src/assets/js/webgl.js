@@ -50,7 +50,7 @@ class Webgl {
   // this code works fine on iMac(safari and chrome) but no sound on iOS(safari and chrome)...
   /*createAudio() {
     this.audio = document.createElement('audio');
-    this.audio.setAttribute('src', 'https://yokoyaayako.com/audio/I_Wish_He_Brings_Donuts.mp3');
+    this.audio.setAttribute('src', 'https://yokoyaayako.com/audio/i_wanna_eat_donuts.mp3');
     this.audio.loop = true;
     this.audio.preload = true;
     document.querySelector('#audio').appendChild(this.audio);
@@ -80,9 +80,9 @@ class Webgl {
   // use howler.js
   createAudio() {
     this.howler = new Howl({
-      src: ['https://yokoyaayako.com/audio/I_Wish_He_Brings_Donuts.mp3'],
+      src: ['https://yokoyaayako.com/audio/i_wanna_eat_donuts.mp3'],
       preload: true,
-      volume: 1.0,
+      volume: .5,
       loop: true,
     });
 
@@ -199,10 +199,9 @@ class Webgl {
       this.dataArray.slice(100, 150),
     ];
 
-    this.audioValues = []
+    this.audioValues = [];
 
     for (let i = 0; i < this.audioArray.length; i++) {
-
       this.audioArrayAvg = avg(this.audioArray[i]);
 
       this.audioValue = this.audioArrayAvg / this.audioArray[i].length;
