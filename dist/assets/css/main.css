@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 
 body,
 h1,
@@ -22,7 +22,7 @@ canvas {
   transform: translateX(-50%);
   width: 100%;
   text-align: center;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Comfortaa', cursive;
 }
 
 .title h1 {
@@ -60,7 +60,7 @@ li > a {
   display: inline-flex;
   align-items: flex-end;
   text-align: right;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Comfortaa', cursive;
 }
 
 .audio p {
@@ -76,7 +76,7 @@ li > a {
   cursor: pointer;
   outline: none;
   font-size: 12px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Comfortaa', cursive;
 }
 
 @media screen and (min-width: 896px) {
