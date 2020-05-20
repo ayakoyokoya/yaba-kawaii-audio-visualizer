@@ -49,7 +49,7 @@ module.exports = {
         options: {
           name: '[name].[ext]',
           outputPath: 'audio/',
-          publicPath: (path) => '/assets/audio/' + path,
+          publicPath: path => 'assets/audio/' + path,
         },
       },
     ],
