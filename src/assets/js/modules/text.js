@@ -90,10 +90,10 @@ class Text {
         z: [110, 110, 110, 110],
       },
       url: [
-        'https://yokoyaayako.com/about',
-        'https://github.com/ayako-yokoya',
-        'https://codepen.io/ayako-yokoya',
-        'https://github.com/ayako-yokoya/portfolio-site',
+        'https://yokoyaayako.com/about/',
+        'https://github.com/ayakoyokoya/',
+        'https://codepen.io/ayakoyokoya/',
+        'https://github.com/ayakoyokoya/portfolio-site/',
       ],
     }
   }
