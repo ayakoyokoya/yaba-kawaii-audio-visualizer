@@ -5,7 +5,7 @@ import { OutlineEffect } from 'three/examples/jsm/effects/OutlineEffect.js';
 import { Howl, Howler } from 'howler/dist/howler.min';
 import mp3Audio from '../audio/i_wanna_eat_donuts.mp3';
 
-import AudioDonut from './modules/audioDonut.js';
+import CenterDonut from './modules/centerDonut.js';
 import FourDonuts from './modules/fourDonuts.js';
 import Heart from './modules/heart.js';
 import Wave from './modules/wave.js';
@@ -138,8 +138,8 @@ class Webgl {
   //}
 
   getMesh() {
-    this.audioDonut = new AudioDonut();
-    this.scene.add(this.audioDonut.mesh);
+    this.centerDonut = new CenterDonut();
+    this.scene.add(this.centerDonut.mesh);
 
     this.heart = new Heart();
     this.scene.add(this.heart.mesh);
@@ -228,7 +228,7 @@ class Webgl {
     this.updateAudioData();
     //this.controls.update();
 
-    this.audioDonut.render(this.audioValues[0]);
+    this.centerDonut.render(this.audioValues[0]);
     this.heart.render();
     this.wave.render();
 

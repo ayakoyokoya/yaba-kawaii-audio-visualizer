@@ -2,7 +2,7 @@ import * as THREE from 'three/build/three.module.js';
 import threeTone from '../../img/threeTone.jpg';
 
 
-class Donut {
+class CenterDonut {
   constructor() {
 
     this.setup();
@@ -43,4 +43,4 @@ class Donut {
   }
 }
 
-export default Donut;
+export default CenterDonut;
