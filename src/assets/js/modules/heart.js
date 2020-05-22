@@ -48,8 +48,6 @@ class Heart {
       .bezierCurveTo(x + 12, y + 15.4, x + 16, y + 11, x + 16, y + 7)
       .bezierCurveTo(x + 16, y + 7, x + 16, y, x + 10, y)
       .bezierCurveTo(x + 7, y, x + 5, y + 5, x + 5, y + 5);
-
-    return this.shape;
   }
 
   setProps() {
@@ -61,8 +59,6 @@ class Heart {
       bevelSize: 1,
       bevelThickness: 1,
     };
-
-    return this.props;
   }
 
   render() {
