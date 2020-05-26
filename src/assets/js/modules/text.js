@@ -81,7 +81,7 @@ class Text {
         z: [110, 110, 110, 110],
       },
       url: [
-        'https://yokoyaayako.com/about/',
+        'https://codepen.io/ayakoyokoya/full/WNQmzjP/',
         'https://github.com/ayakoyokoya/',
         'https://codepen.io/ayakoyokoya/',
         'https://github.com/ayakoyokoya/yaba-kawaii-audio-visualizer/',
