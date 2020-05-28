@@ -22,18 +22,20 @@ void main(){
   float y=uv.y-(sin(uv.x+t)+cos(uv.x))/3.;
 
   /* noise wave */
+  //uv=uv*10.;
+  //float t=uTime;
   //vec3 wave=vec3(3.,0.,.5);
   //float noise=snoise(vec3(wave.x*uv.x,wave.y*uv.y,wave.z));
-  //float y=uv.y-sin(uv.x+t*PI)*2.+cos(uv.x+noise*PI);
+  //float y=uv.y-sin(uv.x+t*PI)+cos(uv.x+noise*PI);
 
-  if (y < .98) {
-    color = cloud;
+  if(y<.98){
+    color=cloud;
   }
-  else if (y<1.) {
-    color = line;
+  else if(y<1.){
+    color=line;
   }
-  else {
-    color = sky;
+  else{
+    color=sky;
   }
 
   gl_FragColor=vec4(color,1);
