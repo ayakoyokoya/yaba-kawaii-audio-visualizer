@@ -12,6 +12,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        exclude: /node_modules/,
         options: {
           presets: ['@babel/preset-env'],
         },
@@ -49,7 +50,7 @@ module.exports = {
         options: {
           name: '[name].[ext]',
           outputPath: 'audio/',
-          publicPath: path => 'assets/audio/' + path,
+          publicPath: (path) => 'assets/audio/' + path,
         },
       },
     ],
