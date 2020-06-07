@@ -11,6 +11,6 @@ check out this😉
 <div align="center"><img alt="yabakawaii_gif" src="https://user-images.githubusercontent.com/44118351/82460900-bd7cec80-9af4-11ea-901a-978516854578.gif"></div>
 
 
-🍫iphonex / 🍡ipad vertical screen
+🍫iphonex / 🍡ipad (landscape mode)
 
 <img width="25%" alt="yabakawaii_iphone" src="https://user-images.githubusercontent.com/44118351/82457613-97554d80-9af0-11ea-9d86-5cfac5f1cfb0.png"> <img width="72%" alt="yabakawaii_ipad" src="https://user-images.githubusercontent.com/44118351/82457681-ab00b400-9af0-11ea-8ce1-1422c9929be7.png">
