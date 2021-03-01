@@ -28,7 +28,7 @@
   "dependencies": {
     "glsl-noise": "0.0.0",
     "howler": "^2.2.0",
-    "three": "^0.116.1"
+    "three": "^0.125.0"
   },
   "private": true
 }
